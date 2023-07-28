@@ -20,6 +20,13 @@ ratings.forEach((ele)=> {
     });
 })
 
+window.addEventListener("resize", (event) => {
+    ratings.forEach((ele)=> {
+    let width =getComputedStyle(ele);
+    ele.style.height = `${width.width}`;
+    });
+
+});
 
 //form to thanks message
 
