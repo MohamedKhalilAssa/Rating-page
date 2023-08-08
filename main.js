@@ -36,5 +36,7 @@ let span=document.querySelector("#changeable");
 form.onsubmit=(e) => {
     e.preventDefault();
     container1.style.display='none';
-    span.textContent = `${rate}`;
+    if (rate == undefined)
+        rate = "Nothing";
+    span.textContent = `${rate}` || "5";
 }
